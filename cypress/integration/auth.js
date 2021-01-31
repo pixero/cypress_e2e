@@ -7,6 +7,7 @@ describe('My first test',()=>{
         cy.get('#UserName')
             .type("ap.rzd.auto")
             .should('have.value',"ap.rzd.auto")
-        cy.click('Войти')
+        cy.get('button').contains('Войти')
+            .click()
     })
 })
