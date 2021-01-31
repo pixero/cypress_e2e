@@ -1,5 +1,5 @@
-describe('My first test',()=>{
-    it('logint in the Skillaz',()=>{
+describe('Auth',()=>{
+    it('login in the Skillaz',()=>{
         cy.visit("https://ws.rc.skillaz.ru/auth")
         cy.get('#Password')
             .type('RZDaptest20@')
@@ -7,7 +7,8 @@ describe('My first test',()=>{
         cy.get('#UserName')
             .type("ap.rzd.auto")
             .should('have.value',"ap.rzd.auto")
-        cy.get('button').contains('Войти')
+        cy.get('button')
+            .contains('Войти')
             .click()
     })
 })
