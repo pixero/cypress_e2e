@@ -1,8 +1,7 @@
 import AuthRequest from "../commands/authRequest";
 
 
-
-describe('Create require',()=>{
+describe('Create require', () => {
     AuthRequest();
 
     it('create req spec ', function () {
@@ -32,5 +31,13 @@ describe('Create require',()=>{
             .type(`Да{enter}`)
         cy.get("#Reason")
             .type(`Новая штатная{enter}`)
+        cy.get("#CloseDate")
+            .click()
+            .get("button").contains((new Date()).getDate())
+            .click()
+        cy.get("div[id='ExtraData.Responsibilities']")
+            .type("Функциональные обязаности текст{enter}")
+        cy.get("div[id='ExtraData.Education']")
+            .type("Высшее{enter}")
     });
 })
