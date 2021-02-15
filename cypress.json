@@ -1,5 +1,8 @@
 {
   "viewportWidth": 1920,
   "viewportHeight": 1080,
-  "baseUrl": "https://ws.rc.skillaz.ru"
+  "baseUrl": "https://ws.rc.skillaz.ru",
+  "video": true,
+  "videoCompression": 32,
+  "videoUploadOnPasses": true
 }
