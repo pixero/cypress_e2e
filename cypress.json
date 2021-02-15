@@ -4,5 +4,6 @@
   "baseUrl": "https://ws.rc.skillaz.ru",
   "video": true,
   "videoCompression": 32,
-  "videoUploadOnPasses": true
+  "videoUploadOnPasses": true,
+  "chromeWebSecurity": false
 }
