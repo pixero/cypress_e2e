@@ -20,9 +20,11 @@ module.exports = (on, config) => {
   // `config` is the resolved Cypress config
 
     on('before:browser:launch', (browser, launchOptions) => {
-        launchOptions.args.push('--use-fake-ui-for-media-stream')
-        launchOptions.args.push('--use-fake-device-for-media-stream')
-
+        if (browser.name==="chrome") {
+            launchOptions.args.push('--use-fake-ui-for-media-stream')
+            launchOptions.args.push('--use-fake-device-for-media-stream')
+            launchOptions.args.push(`--use-file-for-fake-video-capture=C:\\ProgrammingProject\\WebStormProj\\Cypress e2e\\cypress\\fixtures\\akiyo_cif.y4m`)
+        }
         return launchOptions
     })
 }
