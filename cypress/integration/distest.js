@@ -28,5 +28,4 @@ describe('Create require', () => {
         // cy.get("label").contains("Все вышеперечисленное")
         // cy.get("label").contains("Все вышеперечисленное").eq(1)
     });
-
 })
