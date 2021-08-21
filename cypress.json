@@ -1,10 +1,23 @@
 {
   "viewportWidth": 1920,
   "viewportHeight": 1080,
-  "baseUrl": "https://ws.rc.skillaz.ru",
+  "baseUrl": "https://www.google.ru",
   "video": true,
   "videoCompression": 32,
   "videoUploadOnPasses": true,
   "chromeWebSecurity": false,
-  "watchForFileChanges": false
+  "watchForFileChanges": false,
+  "env": {
+    "browserPermissions": {
+      "notifications": "allow",
+      "geolocation": "allow",
+      "camera": "allow",
+      "microphone": "allow",
+      "images": "allow",
+      "javascript": "allow",
+      "popups": "ask",
+      "plugins": "ask",
+      "cookies": "allow"
+    }
+  }
 }
