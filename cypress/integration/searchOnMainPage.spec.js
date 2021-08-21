@@ -1,7 +1,10 @@
-import {MainSearchPage} from "cypress/pages/mainSearchPage";
+import {MainSearchPage} from "pages/mainSearchPage";
 
 describe('Search on main page google.com',()=>{
     it('search on main page',()=>{
-        cy.visit('https://www.google.ru/');
+        const SearchPage = new MainSearchPage();
+        const valueToSearch = 'Вологда';
+        SearchPage.search(valueToSearch)
+            .checkFirstResult(valueToSearch);
     })
 })

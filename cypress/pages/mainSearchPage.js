@@ -1,9 +1,16 @@
 export class MainSearchPage {
     constructor  () {
-        return cy.visit('https://www.google.ru/');
+        cy.visit('https://www.google.ru/');
     }
     search (value)  {
-        return cy.get('input[aria-label="Найти"]')
-            .type(value);
+        cy.get('input[aria-label="Найти"]')
+            .type(`${value}{enter}`);
+        return this;
+    }
+    checkFirstResult (value){
+        cy.get('#rso').children()
+            .first()
+            .should('contain',value);
+        return this;
     }
 }
