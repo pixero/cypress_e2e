@@ -1,1 +1,1 @@
-web: allure open allure-report
+web: npm test
