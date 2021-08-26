@@ -8,16 +8,8 @@
   "chromeWebSecurity": false,
   "watchForFileChanges": false,
   "env": {
-    "browserPermissions": {
-      "notifications": "allow",
-      "geolocation": "allow",
-      "camera": "allow",
-      "microphone": "allow",
-      "images": "allow",
-      "javascript": "allow",
-      "popups": "ask",
-      "plugins": "ask",
-      "cookies": "allow"
-    }
+    "allure": true,
+    "allureResultsPath": "allure-results",
+    "allureAddVideoOnPass": true
   }
 }
